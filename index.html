@@ -6,10 +6,8 @@
 <title>21 Days of You</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
 
 <style>
-/* 🌸 GLOBAL ROMANTIC THEME */
 body{
   font-family: 'Caveat', cursive;
   background: radial-gradient(circle at top, #fff5f9, #ffe3ee, #ffd6e8);
@@ -17,16 +15,13 @@ body{
   overflow-x: hidden;
 }
 
-/* ✨ HEADINGS */
 h1{
   text-align: center;
   margin: 10px 0;
-  letter-spacing: 1px;
   color: #7a2e4a;
   text-shadow: 0 2px 8px rgba(255,140,170,0.25);
 }
 
-/* 📱 GRID */
 .grid{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -40,7 +35,6 @@ h1{
   }
 }
 
-/* 💌 CARD */
 .card{
   perspective: 1200px;
 }
@@ -57,7 +51,6 @@ h1{
   transform: rotateY(180deg);
 }
 
-/* 🌷 FRONT & BACK */
 .front, .back{
   position: absolute;
   width: 100%;
@@ -74,7 +67,6 @@ h1{
   object-fit: cover;
 }
 
-/* 💖 BACK */
 .back{
   background: linear-gradient(145deg, #ffe8f1, #ffd1e3);
   transform: rotateY(180deg);
@@ -91,65 +83,20 @@ h1{
   color: #6b2c44;
 }
 
-/* 🔒 LOCKED */
-.locked .front img{
-  filter: blur(32px) brightness(0.35);
-}
-
-.lock{
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2.3rem;
-  backdrop-filter: blur(4px);
-}
-
-/* ✨ TODAY GLOW */
-.today .inner{
-  animation: glow 2.5s infinite alternate;
-}
-
-@keyframes glow{
-  from{
-    box-shadow: 0 0 15px rgba(255,120,160,0.45);
-  }
-  to{
-    box-shadow: 0 0 35px rgba(255,120,160,0.9);
-  }
-}
-
-/* 🎬 DAY 21 MAGIC */
 .finale .back{
   background: radial-gradient(circle, #ff9dbd, #ff6f9f, #7a1f3d);
   color: #fff;
-  animation: finaleReveal 2s ease forwards;
 }
 
-@keyframes finaleReveal{
-  from{
-    opacity: 0;
-    transform: scale(0.85) rotateY(180deg);
-  }
-  to{
-    opacity: 1;
-    transform: scale(1) rotateY(180deg);
-  }
-}
-
-/* 💓 TYPING CURSOR */
 .typing::after{
   content: '♡';
-  margin-left: 4px;
   animation: blink 1s infinite;
 }
 
 @keyframes blink{
-  50%{opacity: 0;}
+  50%{opacity:0;}
 }
 
-/* 🌸 FLOATING HEARTS */
 .heart-shower{
   position: fixed;
   inset: 0;
@@ -174,119 +121,88 @@ h1{
 
 .heart::before,
 .heart::after{
-  content: '';
-  position: absolute;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
+  content:'';
+  position:absolute;
+  width:14px;
+  height:14px;
+  border-radius:50%;
 }
 
-.heart::before{
-  top: -7px;
-  left: 0;
-}
-
-.heart::after{
-  left: -7px;
-  top: 0;
-}
+.heart::before{ top:-7px; }
+.heart::after{ left:-7px; }
 
 @keyframes float{
-  from{
-    transform: translateY(100vh) rotate(45deg);
-  }
-  to{
-    transform: translateY(-15vh) rotate(45deg);
-  }
+  from{ transform: translateY(100vh) rotate(45deg); }
+  to{ transform: translateY(-15vh) rotate(45deg); }
 }
 </style>
-
 </head>
 
 <body>
 
 <h1>💝 HAPPY BIRTHDAY MI AMOR 💝</h1>
-<h1>❤️ 21 Days 21 Memories ❤️</h1>
+<h1>❤️ 21 Days · 21 Memories ❤️</h1>
 
 <div class="grid"></div>
 
 <script>
-const today = new Date().getDate();
+const today = 21; // ALL DAYS UNLOCKED
 const grid = document.querySelector('.grid');
 
 const messages = [
-  "Day 1 💕 This moment carries quiet elegance and undeniable strength. Every fold, every still glance feels intentional, like confidence learned through time. It’s the kind of beauty that doesn’t seek validation, yet leaves a lasting impression simply by existing.",
-  "Day 2 💖 This kiss feels honest and unguarded, like truth spoken without words. No hesitation, no noise just closeness chosen freely. It reminds me that love doesn’t need perfection, only courage, presence, and the willingness to feel deeply.",
-  "Day 3 💞 Even through distance, this smile reaches straight into my chest. It feels like warmth traveling miles effortlessly. Proof that love isn’t limited by space, but strengthened by recognition two hearts finding each other again and again.",
-  "Day 4 ❤️ There’s comfort in this stillness, an intimacy built on silence rather than words. It feels like belonging without explanation, where love settles softly into everyday moments and transforms them into something meaningful and deeply personal.",
-  "Day 5 💓 Snow surrounds us, yet nothing feels cold here. This moment holds warmth created by closeness alone. It’s love standing steady against the elements, turning winter into memory and proving that togetherness can outshine any storm.",
-  "Day 6 💘 This touch feels instinctive and protective, like care that doesn’t need to be explained. It’s reassurance wrapped in gentleness, reminding me that love often speaks loudest through presence, patience, and quiet acts of devotion.",
-  "Day 7 💝 There’s hope glowing softly in this moment, mixed with anticipation and trust. It feels like love looking forward instead of back, believing in tomorrow without fear, and choosing faith even when the future remains unwritten.",
-  "Day 8 💗 This closeness burns with intensitydesire colliding with emotional depth. It’s raw, magnetic, and fearless. Love here isn’t careful or restrained; it’s bold, consuming, and unapologetic about how deeply it wants to be felt.",
-  "Day 9 💞 Candles flicker as wishes rise quietly into the air. This moment feels wrapped in gratitude and reflection, where love pauses to acknowledge growth, memories, and the simple miracle of being alive together in this exact moment.",
-  "Day 10 ❤️ This closeness feels sacred, like time slowing to witness something real. Vulnerability lives here, unhidden and unashamed. It’s the kind of moment where the world fades completely, leaving only connection, trust, and shared breath.",
-  "Day 11 💓 This look carries confidence shaped by identity and grace. It feels grounded, powerful, and self-assured. A reminder that beauty deepens when it carries history, strength, and the quiet pride of knowing who you are.",
-  "Day 12 💘 This kiss feels slower, softer, and intentional. Like love choosing patience over urgency. There’s comfort in how naturally closeness unfolds, proving that the deepest affection doesn’t rushit stays, lingers, and settles gently.",
-  "Day 13 💝 This smile holds warmth and mischief at once, playful yet sincere. It reminds me that love isn’t only intensity it’s laughter, ease, and joy. Sometimes happiness lives in moments that don’t try too hard.",
-  "Day 14 💗 There’s peace in this quiet focus, where comfort and calm exist together. It feels like sharing silence without awkwardness, where love doesn’t demand attention but remains steady, present, and deeply reassuring in the background.",
-  "Day 15 💞 Snow falls again, but love stands unshaken. This moment feels like warmth blooming in the cold, proving that when hearts align, even the harshest surroundings soften into something gentle and unforgettable.",
-  "Day 16 ❤️ This touch feels protective and deeply intimate, like love acting on instinct alone. It whispers safety, patience, and care, reminding me that real devotion doesn’t announce itself—it simply stays and holds you when needed.",
-  "Day 17 💓 There’s innocence and hope glowing softly here, like dreaming with open eyes. This moment feels full of faith, believing that what’s meant will find its way, and that love rewards patience with something lasting.",
-  "Day 18 💘 This intensity feels electric, almost overwhelming. Desire and emotion blur into something powerful and undeniable. It’s love without restraint, without apology, fully present and fearless about how deeply it wants to connect.",
-  "Day 19 💝 Lights glow, candles burn, and everything feels intimate despite the celebration. This moment holds gratitude and quiet wishes, reminding me that happiness isn’t always loud it’s often felt most deeply in still reflection.",
-  "Day 20 💗 This closeness feels infinite, like a promise made without words. Vulnerability meets devotion here, two souls choosing each other completely, knowing that love this certain is never accidental it’s earned, chosen, and protected..",
-  "Day 21 ❤️ This moment feels like everything finally coming together—desire, devotion, surrender. The way those eyes hold me feels inevitable, like love stripped of fear and doubt. If the world ended here, I’d still know this feeling was worth everything. 💖"
+"Day 1 💕 This moment carries quiet elegance and undeniable strength. Every still glance feels intentional, like confidence shaped through time. It’s beauty that never asks to be seen, yet leaves a permanent impression simply by existing.",
+"Day 2 💖 This kiss feels honest and unguarded, like truth spoken without words. No hesitation, no noise—just closeness chosen freely. Love doesn’t need perfection, only courage, presence, and the willingness to feel deeply.",
+"Day 3 💞 Even through distance, this smile reaches straight into my chest. Warmth travels miles effortlessly, proving love isn’t limited by space, but strengthened when two hearts recognize each other again and again.",
+"Day 4 ❤️ There’s comfort in this stillness, intimacy built on silence rather than words. It feels like belonging without explanation, where love settles into everyday moments and turns them into something deeply personal.",
+"Day 5 💓 Snow surrounds us, yet nothing feels cold here. Love becomes warmth, standing steady against the elements, turning winter into memory and proving togetherness can outshine any storm.",
+"Day 6 💘 This touch feels instinctive and protective, reassurance wrapped in gentleness. Love speaks loudest through presence, patience, and quiet devotion that never needs explanation.",
+"Day 7 💝 Hope glows softly here, mixed with trust and anticipation. Love looks forward instead of back, choosing faith even when the future remains unwritten.",
+"Day 8 💗 This closeness burns with intensity—desire colliding with emotional depth. Raw, magnetic, fearless love that isn’t restrained, but unapologetic in how deeply it wants to be felt.",
+"Day 9 💞 Candles flicker as wishes rise quietly. Love pauses to acknowledge growth, memories, and the miracle of being alive together in this exact moment.",
+"Day 10 ❤️ This closeness feels sacred. Vulnerability lives here, unhidden and unashamed, where the world fades and only trust, breath, and connection remain.",
+"Day 11 💓 Confidence shaped by grace and identity. Beauty deepens when it carries strength, history, and the quiet pride of knowing who you are.",
+"Day 12 💘 This kiss feels slower and intentional—love choosing patience over urgency. Deep affection doesn’t rush; it stays, lingers, and settles gently.",
+"Day 13 💝 This smile holds warmth and mischief together. Love isn’t only intensity—it’s laughter, ease, and joy in moments that don’t try too hard.",
+"Day 14 💗 Peace lives in this quiet focus. Love doesn’t demand attention—it remains steady, present, and deeply reassuring in the background.",
+"Day 15 💞 Snow falls again, but love stands unshaken. When hearts align, even the coldest surroundings soften into something unforgettable.",
+"Day 16 ❤️ This touch whispers safety and devotion. Real love doesn’t announce itself—it simply stays and holds you when needed.",
+"Day 17 💓 Innocence and hope glow softly here. Love rewards patience, trusting what’s meant will always find its way.",
+"Day 18 💘 Intensity surges—emotion and desire merge without restraint. Love fully present, fearless, and undeniably real.",
+"Day 19 💝 Lights glow, candles burn. Happiness isn’t loud—it’s felt most deeply in quiet reflection.",
+"Day 20 💗 This closeness feels infinite. Two souls choosing each other fully, knowing love this certain is never accidental.",
+"Day 21 ❤️ Everything converges here—desire, devotion, surrender. Those eyes hold inevitability. If the world ended now, I’d still know this love was worth everything."
 ];
 
 function typeText(el, text){
-  el.textContent = '';
+  el.textContent='';
   el.classList.add('typing');
   let i=0;
-  const interval = setInterval(()=>{
-    el.textContent += text[i];
-    i++;
-    if(i === text.length){
-      clearInterval(interval);
+  const t=setInterval(()=>{
+    el.textContent+=text[i++];
+    if(i===text.length){
+      clearInterval(t);
       el.classList.remove('typing');
     }
   },40);
 }
 
 for(let i=1;i<=21;i++){
-  const card = document.createElement('div');
-  card.className = 'card';
-
-  if(i > today) card.classList.add('locked');
-  if(i === today) card.classList.add('today');
-  if(i === 21) card.classList.add('finale');
-
-  card.innerHTML = `
-    <div class="inner">
-      <div class="front">
-        <img src="images/day${i}.jpg">
-        ${i>today?'<span class="lock">🔒</span>':''}
-      </div>
-      <div class="back">
-        <p></p>
-      </div>
-    </div>
-  `;
-
-  if(i <= today){
-    card.onclick = ()=>{
-      card.classList.toggle('flip');
-      const p = card.querySelector('.back p');
-      if(p.textContent === ''){
-        typeText(p, messages[i-1]);
-      }
-    };
-  }
-
+  const card=document.createElement('div');
+  card.className='card'+(i===21?' finale':'');
+  card.innerHTML=`
+  <div class="inner">
+    <div class="front"><img src="day${i}.jpg"></div>
+    <div class="back"><p></p></div>
+  </div>`;
+  card.onclick=()=>{
+    card.classList.toggle('flip');
+    const p=card.querySelector('p');
+    if(!p.textContent) typeText(p,messages[i-1]);
+  };
   grid.appendChild(card);
 }
 
-/* Hearts */
-const shower = document.createElement('div');
+const shower=document.createElement('div');
 shower.className='heart-shower';
 for(let i=0;i<40;i++){
   const h=document.createElement('span');
@@ -301,3 +217,4 @@ document.body.appendChild(shower);
 
 </body>
 </html>
+
